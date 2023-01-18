@@ -1,6 +1,6 @@
 <section class="container container__half-image">
     <div class="wrapper wrapper__image">
-        <img src="<?php echo $args['image']['sizes']['image-content-element']; ?>" alt="<?php echo $args['image']['alt']; ?>">
+        <img width="<?php echo $args['image']['width']?>" height="<?php echo $args['image']['height']?>" src="<?php echo $args['image']['sizes']['image-content-element']; ?>" alt="<?php echo $args['image']['alt']; ?>">
     </div>
 
     
