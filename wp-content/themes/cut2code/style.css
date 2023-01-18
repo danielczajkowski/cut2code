@@ -468,6 +468,11 @@ a:focus-visible {
   text-align: center;
   padding: 91px 0 129px;
 }
+@media (max-width: 768px) {
+  .container__header {
+    padding: 91px 0 39px;
+  }
+}
 .container__header .subheader {
   margin: 0 0 5px;
 }
@@ -534,6 +539,26 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.container__all_posts .tile a .wrapper__thumbnail.safari-image {
+  height: 446px;
+}
+@media (max-width: 500px) {
+  .container__all_posts .tile a .wrapper__thumbnail.safari-image {
+    height: 300px;
+  }
+}
+.container__all_posts .tile a .wrapper__thumbnail.safari-image img {
+  height: 446px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 500px) {
+  .container__all_posts .tile a .wrapper__thumbnail.safari-image img {
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .container__all_posts .tile a .wrapper__content {
   width: 100%;
@@ -607,6 +632,10 @@ a:focus-visible {
   text-align: center;
   position: relative;
   transition: color 0.2s ease, transform 0.1s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .container__read-more button:hover {
   color: #967573;

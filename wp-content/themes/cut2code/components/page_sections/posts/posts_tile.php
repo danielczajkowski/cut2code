@@ -5,7 +5,7 @@
 
 <div class="tile tile__post">
     <a href="<?php the_permalink(); ?>">
-        <div class="wrapper wrapper__thumbnail">
+        <div class="wrapper wrapper__thumbnail<?php get_browser_name($_SERVER['HTTP_USER_AGENT']) === "Safari" ? " safari-image" : null; ?>">
             <?php the_post_thumbnail(); ?>
         </div>
         <div class="wrapper wrapper__content">

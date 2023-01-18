@@ -466,6 +466,10 @@ a {
     text-align: center;
     padding: 91px 0 129px;
 
+    @media (max-width: 768px) {
+      padding: 91px 0 39px;
+    }
+
     .subheader {
       margin: 0 0 5px;
     }
@@ -531,6 +535,22 @@ a {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &.safari-image {
+              height: 446px;
+              @media (max-width: 500px) {
+                height: 300px;
+              }
+              img {
+                height: 446px;
+                object-fit: cover;
+
+                @media (max-width: 500px) {
+                  height: 300px;
+                  object-fit: cover;
+                }
+              }
+            }
           }
 
           &__content {
@@ -612,6 +632,7 @@ a {
       text-align: center;
       position: relative;
       transition: color 0.2s ease, transform 0.1s ease;
+      user-select: none;
 
       &:hover {
         color: $brown-font;

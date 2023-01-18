@@ -9,7 +9,7 @@
 
     <div class="wrapper wrapper__gallery">
         <?php foreach($args['gallery'] as $hero_image): ?>
-            <img src="<?php echo $hero_image['url']; ?>" alt="<?php echo $hero_image['alt']; ?>">
+            <img width="<?php echo $hero_image['width']; ?>" heigth="<?php echo $hero_image['height']; ?>" src="<?php echo $hero_image['url']; ?>" alt="<?php echo $hero_image['alt']; ?>">
         <?php endforeach; ?>
 
         <span class="ornament"></span>

@@ -66,10 +66,7 @@ function wpdocs_theme_setup()
 
 function load_cut2code_scripts()
 {
-    wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
     wp_enqueue_style('cut2code-main-style', get_template_directory_uri().'/style.css');
-
-
 
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.3.min.js', NULL, NULL, true);
     wp_enqueue_script('load-posts', get_template_directory_uri() . '/assets/js/load-more.js', NULL, NULL, true);

@@ -24,7 +24,7 @@
 <nav id="main-menu" class="container container__menu">
   <?php get_template_part( 'components/small_dots'); ?>
   <a href="<?php echo home_url() ?>" class="logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="MAD HATTERS - Logo">
+        <img width="303" heigth="30" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="MAD HATTERS - Logo">
   </a>
   <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
