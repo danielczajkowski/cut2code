@@ -4,11 +4,9 @@
 <head>
 
     <meta charset="<?php bloginfo('charset')?>" />
-    <?php if (is_search()): ?>
-      <meta name="robots" content="noindex, nofollw" />
-    <?php endif;?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="">
+    <meta name="description" content="<?php echo get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true) ? get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true) : get_bloginfo( 'description' ); ?>" />
     
     <link rel="shortcut icon" href="<?=get_template_directory_uri();?>/assets/images/favicon.ico" />
 
@@ -16,31 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
-    <title>
-      <?php
-        if(is_archive()) {
-          echo ucfirst(trim(wp_title('', false))) . ' - ';
-        } else if(!(is_404()) && (is_single()) || (is_page())) {
-          $title = wp_title('', false);
-          if(!empty($title)) {
-            echo $title . ' - ';
-          }
-        } else if(is_404()) {
-          echo 'Nie znaleziono strony ';
-        }
-        if(is_home()) {
-          bloginfo('name');
-          echo ' - ';
-          bloginfo('description');
-        } else {
-          echo bloginfo('name');
-        }
-        global $paged;
-        if($paged > 1) {
-          echo ' - strona ' . $paged;
-        }
-      ?>
-    </title>
+    <title><?php wp_title(''); ?></title>
+
     <?php wp_head();?>
 </head>
 
