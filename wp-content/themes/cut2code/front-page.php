@@ -39,7 +39,7 @@ foreach($page_elements as $page_elements_row) {
             break;
 
         case 'posts':
-            get_template_part( 'components/page_sections/posts/post_section', '', $page_elements_row['see_more']);
+            get_template_part( 'components/page_sections/posts/post_section');
             break;
     
         case 'quote':

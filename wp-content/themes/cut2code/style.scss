@@ -230,8 +230,9 @@ a {
   display: inline-block;
   margin: 29px 0 24px;
 
-  img {
+  svg {
     max-width: 50vw;
+    height: auto;
   }
 
   @media (max-width: 767px) {
