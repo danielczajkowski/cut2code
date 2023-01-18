@@ -1,8 +1,8 @@
 <div class="container container__read-more">
     <span>
-        <?php echo $args['content']['bg_label']; ?>
+        More
     </span>
     <button class="load-more" posts-container="<?php echo $args['post_container_id']; ?>">
-        <?php echo $args['content']['label']; ?>
+        + Show more
     </button>
 </div>

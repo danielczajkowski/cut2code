@@ -74,23 +74,6 @@ function load_cut2code_scripts()
 }
 add_action('wp_enqueue_scripts', 'load_cut2code_scripts');
 
-function getCurrentPageUrl()
-{
-    $pageURL = 'http';
-    if (isset($_SERVER["HTTPS"])) {
-        if ($_SERVER["HTTPS"] == "on") {
-            $pageURL .= "s";
-        }
-    }
-    $pageURL .= "://";
-
-    if ($_SERVER["SERVER_PORT"] != "80") {
-        $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
-    } else {
-        $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
-    }
-    return $pageURL;
-}
 
 function load_more_params() {
     $wp_query = new WP_Query(array(
@@ -112,6 +95,7 @@ add_action( 'wp_head', 'load_more_params' );
 
 add_action( 'wp_ajax_load_more_posts', 'load_more_posts' );
 add_action( 'wp_ajax_nopriv_load_more_posts', 'load_more_posts' );
+
 function load_more_posts() {
   $query = new WP_Query( array(
     'post_type' => 'post',
